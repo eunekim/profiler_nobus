@@ -1,4 +1,4 @@
-function a() {
+function minValue() {
     var min = core[0];
     for (var i = 0; i < core.length; i++) {
         
@@ -10,7 +10,7 @@ function a() {
 };
 
 
-function b() {
+function maxValue() {
     var max = 0;
     for (var i = 0; i < core.length; i++) {
         if (core[i] > max) {
@@ -20,7 +20,7 @@ function b() {
     return max;
 };
 
-function c (){ 
+function avgValue(){ 
     var sum = 0;   
     for (var i = 0; i < core.length; i++) {
         sum = sum + core[i];
@@ -48,9 +48,9 @@ evnet_a.addEventListener('change', function(event){
     reader.readAsText(file);
     const valueA = reader.readAsArrayBuffer(file);
 
-    a(valueA);
-    b(valueA);
-    c(valueA);
+    minValue(valueA);
+    maxValue(valueA);
+    avgValue(valueA);
     
 });
 
