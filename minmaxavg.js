@@ -33,4 +33,7 @@ function avgValue(data){
 
 document.write(min, max, avg);
 
+//Math.min();
+//Math.max();
+
 // 표준편차 함수 추가
