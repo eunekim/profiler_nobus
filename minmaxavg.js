@@ -32,3 +32,5 @@ function avgValue(data){
 };
 
 document.write(min, max, avg);
+
+// 표준편차 함수 추가
