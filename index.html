@@ -8,52 +8,42 @@
 </head>
 <body>
     <div class="page">
-        <div class="nav">
-            <a class="nav_item" href="index.html">Profiler</a>
-            <div id="side_bar" class="side_bar">
-                <a href="javascript:void(0)" class="btn_close" onclick="navClose()">&times;</a>
-                <a href="#">graph1</a>
-                <a href="#">graph2</a>
-                <a href="#">graph3</a>
-                <a href="#">graph4</a>
-            </div>
-            <div class="nav_item2">
-                <button class="fa-solid fa-house" onClick="location.href='main.html'" style="color: #ffffff; background-color:black; border:none; cursor: pointer; margin:0 15px; font-size:25px;"></button>
-                <span class="nav_item_menu" style="font-size:30px; cursor:pointer; color:white;" onclick="navOpen()">&#9776;</span>
+        <!-- <div class="title">
+            <header class="title-1">
+                <div class="title-2">
+                    <div class="title-item"><a class="title-main" href="index.html">Profiler</a></div>
+                    <div class="title-item"><a class="nav-link" href="index.html"></a></div>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">graph1</a>
+                        <a href="#">graph2</a>
+                        <a href="#">graph3</a>
+                        <a href="#">graph4</a>
+                    </div>
+                    <span class="menu" style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+                </div>
+            </header>
+        </div> -->
+        <div class="wrapper" >
+            <div class="main_title">Profiler</div>
+            <div class="main_message">Please select a file</div>
+            <div class="main_upload">
+                <form id="form" action="/" method="post" enctype="multipart/form-data" target="repacatFrame">
+                    <div class="filebox">
+                        <input type="file" id="file" name="name">
+                        <button type="submit" class="submit_button" onClick="location.href='index.html'">제출</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="content">
-            <div class="graph">
-                그래프
-            </div>
-            <div class="option">
-                <div class="option_div">
-                    <div class="option_title">작업단위</div>
-                    <button onclick="task1()" class="option_button task">task1</button>
-                    <button onclick="task2()" class="option_button task">task2</button>
-                    <button onclick="task3()" class="option_button task">task3</button>
-                    <button onclick="task4()" class="option_button task">task4</button>
-                    <button onclick="task5()" class="option_button task">task5</button>
-                </div>
-                <div class="option_div">
-                    <div class="option_title">코어단위</div>
-                    <button onclick="core1()" class="option_button core">core1</button>
-                    <button onclick="core2()" class="option_button core">core2</button>
-                    <button onclick="core3()" class="option_button core">core3</button>
-                    <button onclick="core4()" class="option_button core">core4</button>
-                    <button onclick="core5()" class="option_button core">core5</button>
-                </div>
-            </div>
-        </div>
-        <footer class="foot">
-            <p>Created By - NoBus_SKU</p>
-        </footer>
+        <!-- <footer class="foot">
+            <p>Created By - NoBus</p>
+        </footer> -->
     </div>
     <script src="minmaxavg.js"></script>
     <script src="front.js"></script>
     <script src="graph.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://kit.fontawesome.com/3b9605a1e7.js" crossorigin="anonymous"></script>
 </body>
 </html>

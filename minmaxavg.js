@@ -33,13 +33,8 @@ function avgValue(data){
 
 document.write(min, max, avg);
 
-//Math.min();
-//Math.max();
-
-// 표준편차 함수 추가
-
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/');
+xhr.open('POST', '/');
 xhr.onload = function() {
   if (xhr.status === 200) {
     var data = xhr.responseText;
@@ -51,8 +46,7 @@ xhr.onload = function() {
 };
 xhr.send();
 
-var jsonObject = JSON.parse(data);
-var dataArray = Object.values(jsonObject);
+var dataArray = data.split(',');
 
 var max = Math.max(...dataArray);
 var min = Math.min(...dataArray);
