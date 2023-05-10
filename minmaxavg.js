@@ -58,3 +58,12 @@ var max = Math.max(...dataArray);
 var min = Math.min(...dataArray);
 var sum = dataArray.reduce((acc, cur) => acc + cur, 0);
 var avg = sum / dataArray.length;
+
+//표준편차 함수
+function calculateStandardDeviation(data) {
+    const n = data.length;
+    const mean = data.reduce((acc, cur) => acc + cur, 0) / n;
+    const variance = data.reduce((acc, cur) => acc + Math.pow(cur - mean, 2), 0) / n;
+    const standardDeviation = Math.sqrt(variance);
+    return standardDeviation;
+  }
