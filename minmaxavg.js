@@ -37,3 +37,24 @@ document.write(min, max, avg);
 //Math.max();
 
 // 표준편차 함수 추가
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/');
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    var data = xhr.responseText;
+    // 데이터를 처리하는 코드를 작성합니다.
+  }
+  else {
+    console.log('서버로부터 데이터를 가져오는 데 실패했습니다.');
+  }
+};
+xhr.send();
+
+var jsonObject = JSON.parse(data);
+var dataArray = Object.values(jsonObject);
+
+var max = Math.max(...dataArray);
+var min = Math.min(...dataArray);
+var sum = dataArray.reduce((acc, cur) => acc + cur, 0);
+var avg = sum / dataArray.length;
