@@ -48,10 +48,10 @@ fetchDataById();
 // 데이터 처리 함수
 function processData(data) {
   // 여기서 데이터를 자바스크립트 함수에 넣어서 원하는 작업을 수행합니다
-  id = data.id;
-  task = data.task;
-  core = data.core;
-  value = data.value;
+  let id = data.id;
+  let task = data.task;
+  let core = data.core;
+  let value = data.value;
 
   for (id = 0; id < 300; id++) {
     if (task == a){
@@ -97,6 +97,7 @@ function processData(data) {
       }
     }
   }
+  console.log(min1)
   return {
     min1 : min1,
     max1 : max1,
