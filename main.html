@@ -18,42 +18,51 @@
                 <a href="#">graph4</a>
             </div>
             <div class="nav_item2">
-                <button class="fa-solid fa-house" onClick="location.href='main.html'" style="color: #ffffff; background-color:black; border:none; cursor: pointer; margin:0 15px; font-size:25px;"></button>
+                <button class="fa-solid fa-house" onClick="location.href='index.html'" style="color: #ffffff; background-color:black; border:none; cursor: pointer; margin:0 15px; font-size:25px;"></button>
                 <span class="nav_item_menu" style="font-size:30px; cursor:pointer; color:white;" onclick="navOpen()">&#9776;</span>
             </div>
         </div>
         <div class="content">
             <div class="graph">
-                그래프
+                <div style="width: 900px; height: 900px;">
+                    <canvas id="myChart" width="1007" height="503" style="display: block; box-sizing: border-box; height: 403px; width: 806px;"></canvas>
+                </div>              
             </div>
             <div class="option">
                 <div class="option_div">
                     <div class="option_title">작업단위</div>
-                    <button onclick="task1()" class="option_button task">task1</button>
-                    <button onclick="task2()" class="option_button task">task2</button>
-                    <button onclick="task3()" class="option_button task">task3</button>
-                    <button onclick="task4()" class="option_button task">task4</button>
-                    <button onclick="task5()" class="option_button task">task5</button>
+                    <button onclick="Button(1,core,task)" class="option_button task">task1</button>
+                    <button onclick="Button(2,core,task)" class="option_button task">task2</button>
+                    <button onclick="Button(3,core,task)" class="option_button task">task3</button>
+                    <button onclick="Button(4,core,task)" class="option_button task">task4</button>
+                    <button onclick="Button(5,core,task)" class="option_button task">task5</button>
                 </div>
                 <div class="option_div">
                     <div class="option_title">코어단위</div>
-                    <button onclick="core1()" class="option_button core">core1</button>
-                    <button onclick="core2()" class="option_button core">core2</button>
-                    <button onclick="core3()" class="option_button core">core3</button>
-                    <button onclick="core4()" class="option_button core">core4</button>
-                    <button onclick="core5()" class="option_button core">core5</button>
+                    <button onclick="coreButton(1,task,core)" class="option_button core">core1</button>
+                    <button onclick="coreButton(2,task,core)" class="option_button core">core2</button>
+                    <button onclick="coreButton(3,task,core)" class="option_button core">core3</button>
+                    <button onclick="coreButton(4,task,core)" class="option_button core">core4</button>
+                    <button onclick="coreButton(5,task,core)" class="option_button core">core5</button>
                 </div>
             </div>
         </div>
         <footer class="foot">
             <p>Created By - NoBus_SKU</p>
         </footer>
-    </div>
-    <script src="minmaxavg.js"></script>
-    <script src="front.js"></script>
+    </div>  
+
+    <script>
+        function navOpen() {
+            document.getElementById("side_bar").style.width = "250px";}
+        function navClose() {
+            document.getElementById("side_bar").style.width = "0";}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="graph.js"></script>
+    <script src="datapush.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://kit.fontawesome.com/3b9605a1e7.js" crossorigin="anonymous"></script>
 </body>
 </html>

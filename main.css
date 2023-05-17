@@ -167,3 +167,10 @@ input[type=file]::file-selector-button {
 
 .submit_button:hover {
   background-color: rgb(210, 210, 210);}
+
+/* 그래프 */
+path {
+	fill: none;
+	stroke: #999;
+}
+
