@@ -1,11 +1,10 @@
 const mysql = require('mysql');
-
-// MySQL 연결 설정
+// MySQL 연결
 const connection = mysql.createConnection({
-  host: 'localhost', // MySQL 호스트
-  user: 'username', // MySQL 사용자명
-  password: 'password', // MySQL 비밀번호
-  database: 'database_name' // MySQL 데이터베이스 이름
+  host: 'localhost', // 호스트
+  user: 'username', // 사용자명
+  password: 'password', // 비밀번호
+  database: 'database_name' // 데이터베이스 이름
 });
 
 // 데이터 가져오기 함수
@@ -47,7 +46,6 @@ fetchDataById();
 
 // 데이터 처리 함수
 function processData(data) {
-  // 여기서 데이터를 자바스크립트 함수에 넣어서 원하는 작업을 수행합니다
   function taskButton(a){
     let buttonValue = a; 
     let buttonName = data.task;
