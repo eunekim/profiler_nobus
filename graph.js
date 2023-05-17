@@ -6,7 +6,7 @@ var myChart = new Chart(ctx, {
       plugins: {
         title: {
           display: true,
-          text: 'Min and Max Settings'
+          text: 'Min and Max and avg'
         }
       },
       scales: {
