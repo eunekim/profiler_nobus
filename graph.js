@@ -22,19 +22,19 @@ var myChart = new Chart(ctx, {
         ],
         datasets: [{
             label: 'max',
-            data: [10, 30, 50, 20, 25],
+            data: [max1, max2, max3, max4, max5],
             backgroundColor:'rgba(255, 0, 0, 1)',
             borderColor:'rgba(255, 0, 0, 1)'
         },
         {
             label: 'min',
-            data: [30, 33, 22, 19, 11],
+            data: [min1, min2, min3, min4, min5],
             backgroundColor: 'rgba(0, 99, 255, 1)',
             borderColor:'rgba(0, 99, 255, 1)'
         },
         {
             label: 'avg',
-            data: [30, 30, 30, 30, 30],
+            data: [avg1, avg2, avg3, avg4, avg5],
             backgroundColor: 'rgba(0, 0, 0, 1)',
             borderColor:'rgba(0, 0, 0, 1)'
         },

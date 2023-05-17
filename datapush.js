@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 });
 
 // 데이터 가져오기 함수
-function fetchDataById(id) {
+function fetchDataById() {
   // MySQL 연결
   connection.connect((error) => {
     if (error) {
