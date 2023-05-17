@@ -48,55 +48,69 @@ fetchDataById();
 // 데이터 처리 함수
 function processData(data) {
   // 여기서 데이터를 자바스크립트 함수에 넣어서 원하는 작업을 수행합니다
+  function taskButton(a){
+    let buttonValue = a; 
+    let buttonName = data.task;
+    let labelName = data.core;
+  }
+  function coreButton(a){
+    let buttonValue = a; 
+    let buttonName = data.core;
+    let labelName = data.task;
+  }
+  
   let id = data.id;
-  let task = data.task;
-  let core = data.core;
   let value = data.value;
 
   for (id = 0; id < 300; id++) {
-    if (task == a){
-      if (core == 1) {
+    if (buttonName == buttonValue){
+      if (labelName == 1) {
         var mmaArray1 = [];
         mmaArray1.push(value);
-        mmaResult = cal(mmaArray1);
-        var min1 = mmaResult.min;
-        var max1 = mmaResult.max;
-        var avg1 = mmaResult.avg;
       }
-      else if (core == 2) {
+      else if (labelName == 2) {
         var mmaArray2 = [];
         mmaArray2.push(value);
-        mmaResult = cal(mmaArray2);
-        var min2 = mmaResult.min;
-        var max2 = mmaResult.max;
-        var avg2 = mmaResult.avg;
       }
-      else if (core == 3) {
+      else if (labelName == 3) {
         var mmaArray3 = [];
         mmaArray3.push(value);
-        mmaResult = cal(mmaArray3);
-        var min3 = mmaResult.min;
-        var max3 = mmaResult.max;
-        var avg3 = mmaResult.avg;
       }
-      else if (core == 4) {
+      else if (labelName == 4) {
         var mmaArray4 = [];
         mmaArray4.push(value);
-        mmaResult = cal(mmaArray4);
-        var min4 = mmaResult.min;
-        var max4 = mmaResult.max;
-        var avg4 = mmaResult.avg;
       }
       else {
         var mmaArray5 = [];
         mmaArray5.push(value);
-        mmaResult = cal(mmaArray5);
-        var min5 = mmaResult.min;
-        var max5 = mmaResult.max;
-        var avg5 = mmaResult.avg;
       }
     }
   }
+  var mmaResult1 = cal(mmaArray1);
+  var min1 = mmaResult1.min;
+  var max1 = mmaResult1.max;
+  var avg1 = mmaResult1.avg;
+
+  var mmaResult2 = cal(mmaArray2);
+  var min2 = mmaResult2.min;
+  var max2 = mmaResult2.max;
+  var avg2 = mmaResult2.avg;
+
+  var mmaResult3 = cal(mmaArray3);
+  var min3 = mmaResult3.min;
+  var max3 = mmaResult3.max;
+  var avg3 = mmaResult3.avg;
+  
+  var mmaResult4 = cal(mmaArray4);
+  var min4 = mmaResult4.min;
+  var max4 = mmaResult4.max;
+  var avg4 = mmaResult4.avg;
+  
+  var mmaResult5 = cal(mmaArray5);
+  var min5 = mmaResult5.min;
+  var max5 = mmaResult5.max;
+  var avg5 = mmaResult5.avg;
+  
   console.log(min1)
   return {
     min1 : min1,
