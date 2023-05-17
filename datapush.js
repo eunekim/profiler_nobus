@@ -52,11 +52,15 @@ function processData(data) {
     let buttonValue = a; 
     let buttonName = data.task;
     let labelName = data.core;
+
+    return buttonValue, buttonName, labelName
   }
   function coreButton(a){
     let buttonValue = a; 
     let buttonName = data.core;
     let labelName = data.task;
+
+    return buttonValue, buttonName, labelName
   }
   
   let id = data.id;
@@ -110,7 +114,7 @@ function processData(data) {
   var min5 = mmaResult5.min;
   var max5 = mmaResult5.max;
   var avg5 = mmaResult5.avg;
-  
+
   console.log(min1)
   return {
     min1 : min1,

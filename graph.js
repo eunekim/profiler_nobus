@@ -13,6 +13,8 @@ var myChart = new Chart(ctx, {
         y: {
           min: 10,
           max: 50,
+        //   min: Math.min(...dataMin),
+        //   max: Math.max(...dataMax),
         }
       }
     },
